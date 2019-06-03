@@ -537,9 +537,9 @@ var luxon = (function (exports) {
         return null;
     }
   }
-  var weekdaysLong = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-  var weekdaysShort = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  var weekdaysNarrow = ["M", "T", "W", "T", "F", "S", "S"];
+  var weekdaysLong = ["Mandag", "Tirsdag", "Ons", "Tor", "Fredag", "Lørdag", "Søndag"];
+  var weekdaysShort = ["Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn"];
+  var weekdaysNarrow = ["M", "T", "O", "T", "F", "L", "S"];
   function weekdays(length) {
     switch (length) {
       case "narrow":
