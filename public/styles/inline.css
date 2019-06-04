@@ -430,3 +430,59 @@ body {
     width: 32px;
   }
 }
+
+body{ margin: 0; font-family: sans-serif; }
+body.night{
+    background: #00151f;
+}
+
+.toggle{
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  background: #fff;
+  border: 2px solid #00151f;
+  width: 45px;
+  height: 22px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.5s;
+
+}
+.toggle.active{
+   background: #00151f;
+   border: #fff 2px solid;
+}
+.toggle::before{
+   content: '';
+   position: absolute;
+   top: 1px;
+   left: 2px;
+   width: 16px;
+   height: 16px;
+   background: #00151f;
+   border-radius: 50%;
+   transition: 0.5s; 
+}
+
+.toggle.active::before{
+   left: 22px;
+   background: #fff;
+}
+
+body.night .weather-card{
+   background: #00151f;
+}
+
+body.night .weather-card .remove-city {
+  color: white;
+ }
+ 
+ body.night .weather-card{
+  background: #00151f;
+  color: white;
+ }
+
+ body.night .weather-card .current .description .label {
+  color: whitesmoke;
+ }

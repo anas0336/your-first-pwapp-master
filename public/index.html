@@ -45,11 +45,18 @@
     <h1>
       Vejr app 
       <a href="https://darksky.net/poweredby/" class="powered-by">
-        Powered by Mohammed 
+        lavet af  Mohammed  
       </a>
     </h1>
     <button id="butInstall" aria-label="Install" hidden></button>
     <button id="butRefresh" aria-label="Refresh"></button>
+
+
+  <div class="toggle">
+  </div>
+
+
+
   </header>
 
   <main class="main">
@@ -84,25 +91,25 @@
         </div>
         <div class="description">
           <div class="humidity">
-            <span class="label">Humidity:</span>
-            <span class="value"></span><span class="scale">%</span>
-          </div>
-          <div class="wind">
-            <span class="label">Wind:</span>
-            <span class="value"></span>
-            <span class="scale">mph</span>
-            <span class="direction"></span>°
-          </div>
-          <div class="sunrise">
-            <span class="label">Sunrise:</span>
-            <span class="value"></span>
-          </div>
-          <div class="sunset">
-              <span class="label">Sunset:</span>
+              <span class="label">Fugtighed:</span>
+              <span class="value"></span><span class="scale">%</span>
+            </div>
+            <div class="wind">
+              <span class="label">blæst:</span>
+              <span class="value"></span>
+              <span class="scale">mph</span>
+              <span class="direction"></span>°
+            </div>
+            <div class="sunrise">
+              <span class="label">solopgang:</span>
               <span class="value"></span>
             </div>
+            <div class="sunset">
+              <span class="label">Solnedgang:</span>
+              <span class="value"></span>
+            </div>
+          </div>
         </div>
-      </div>
       <div class="future">
         <div class="oneday">
           <div class="date"></div>
@@ -208,8 +215,19 @@
   <script src="/scripts/luxon-1.11.4.js"></script>
   <script src="/scripts/app.js"></script>
   <!-- CODELAB: Add the install script here -->
+  <script
+ src="https://code.jquery.com/jquery-3.4.1.js"
+ crossorigin="anonymous"></script>
   <script src="/scripts/install.js"></script>
   <script>
+ 
+       $(document).ready(function () {
+           $('.toggle').click(function () {
+               $('.toggle').toggleClass('active')
+               $('body').toggleClass('night')
+           })
+       });
+    
     // CODELAB: Register service worker.
     if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
